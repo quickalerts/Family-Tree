@@ -1,0 +1,133 @@
+/* Container for the family chart */
+.f3 {
+  height: 700px; /* Fixed height for the chart container */
+  max-height: calc(100vh - 80px); /* Maximum height based on viewport height minus 80px */
+  width: 900px; /* Fixed width for the chart container */
+  max-width: 100%; /* Maximum width to be 100% of the parent container */
+  margin: auto; /* Center the container horizontally */
+  position: relative; /* Position relative for positioning child elements */
+}
+
+/* Style for elements that should have a pointer cursor */
+.f3 .cursor-pointer {
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Style for the main SVG element */
+.f3 svg.main_svg {
+  width: 100%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
+  background-color: #3b5560; /* Background color of the SVG */
+  color: #3b5560; /* Color for text within the SVG */
+}
+
+/* Text within the main SVG */
+.f3 svg.main_svg text {
+  fill: currentColor; /* Text color matches the color property of the SVG */
+}
+
+/* Female card styles */
+.f3 rect.card-female, .f3 .card-female .card-body-rect, .f3 .card-female .text-overflow-mask {
+  fill: lightpink; /* Fill color for female cards */
+}
+
+/* Male card styles */
+.f3 rect.card-male, .f3 .card-male .card-body-rect, .f3 .card-male .text-overflow-mask {
+  fill: lightblue; /* Fill color for male cards */
+}
+
+/* Genderless card styles */
+.f3 .card-genderless .card-body-rect, .f3 .card-genderless .text-overflow-mask {
+  fill: lightgray; /* Fill color for genderless cards */
+}
+
+/* Styles for the add card button */
+.f3 .card_add .card-body-rect {
+  fill: #3b5560; /* Fill color for the add card button */
+  stroke-width: 4px; /* Border width of the add card button */
+  stroke: #fff; /* Border color of the add card button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Text inside the add card button */
+.f3 g.card_add text {
+  fill: #fff; /* Text color for the add card button */
+}
+
+/* Style for the main card border */
+.f3 .card-main {
+  stroke: #000; /* Border color for the main card */
+}
+
+/* Transition effects for family tree card */
+.f3 .card_family_tree rect {
+  transition: 0.3s; /* Smooth transition for changes */
+}
+
+/* Hover effect to scale the card */
+.f3 .card_family_tree:hover rect {
+  transform: scale(1.1); /* Scale the card up by 10% on hover */
+}
+
+/* Style for add relative button */
+.f3 .card_add_relative {
+  cursor: pointer; /* Pointer cursor on hover */
+  color: #fff; /* Text color for the add relative button */
+  transition: 0.3s; /* Smooth transition for color changes */
+}
+
+/* Style for the circle in the add relative button */
+.f3 .card_add_relative circle {
+  fill: rgba(0, 0, 0, 0); /* Transparent fill for the circle */
+}
+
+/* Hover effect to change color */
+.f3 .card_add_relative:hover {
+  color: black; /* Change text color to black on hover */
+}
+
+/* Style for pencil icon used for editing */
+.f3 .card_edit.pencil_icon {
+  color: #fff; /* Icon color */
+  transition: 0.3s; /* Smooth transition for color changes */
+}
+
+/* Hover effect to change pencil icon color */
+.f3 .card_edit.pencil_icon:hover {
+  color: black; /* Change icon color to black on hover */
+}
+
+/* Transition effects for break link and link particles */
+.f3 .card_break_link, .f3 .link_upper, .f3 .link_lower, .f3 .link_particles {
+  transform-origin: 50% 50%; /* Set origin for transformations */
+  transition: 1s; /* Smooth transition for changes */
+}
+
+/* Style for break link in the family chart */
+.f3 .card_break_link {
+  color: #fff; /* Text color for the break link */
+}
+
+/* Styles for closed break link state */
+.f3 .card_break_link.closed .link_upper {
+  transform: translate(-140.5px, 655.6px); /* Move the upper part of the link */
+}
+
+.f3 .card_break_link.closed .link_upper g {
+  transform: rotate(-58deg); /* Rotate the upper part of the link */
+}
+
+.f3 .card_break_link.closed .link_particles {
+  transform: scale(0); /* Scale down particles to zero */
+}
+
+/* Style for input fields within the family chart */
+.f3 .input-field input {
+  height: 2.5rem !important; /* Set height for input fields */
+}
+
+/* Label active state styling */
+.f3 .input-field > label:not(.label-icon).active {
+  -webkit-transform: translateY(-8px) scale(0.8); /* Move and scale the label up in WebKit browsers */
+  transform: translateY(-8px) scale(0.8); /* Move and scale the label up */
+}
